@@ -57,5 +57,5 @@ function draw() {
   rect(blower1.position.x,blower1.position.y,100,100); 
 }
 function blow(){
-  Matter.Body.applyForce(ball,{x:0,y:0},{x:-100,y:-5})
+   Matter.Body.applyForce(ball,{x:0,y:0},{x:-0.9,y:-5})
 }
