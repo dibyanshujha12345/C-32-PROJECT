@@ -21,10 +21,10 @@ function setup(){
     density : 0.1
   }
 
-  blower = Bodies.rectangle(450,400,350,10,blowerOptions);
+  blower = Bodies.rectangle(width / 2 - 50, height / 2 + 90, 150, 20,blowerOptions);
   World.add(world,blower);
-
-  blower1 = Bodies.rectangle(250,360,200,40,blowerOptions);
+  
+  blower1 = Bodies.rectangle(width / 2 + 70, height / 2 + 20, 100, 100,blowerOptions);
   World.add(world,blower1);
 
   var options ={
@@ -32,7 +32,7 @@ function setup(){
     density : 0.1
   }
 
-  ball = Bodies.circle(550,100,50,options);
+  ball = Bodies.circle(width / 2 + 80, height / 2 - 80,50,options);
   World.add(world,ball);
 
  button = createButton("Click to Blow");
@@ -52,9 +52,9 @@ function draw() {
   
   drawSprites();
 
-  ellipse(ball.position.x,ball.position.y,50);
-  rect(blower.position.x,blower.position.y,350,10);
-  rect(blower1.position.x,blower1.position.y,200,40); 
+  ellipse(ball.position.x,ball.position.y,50,50);
+  rect(blower.position.x,blower.position.y,150,20);
+  rect(blower1.position.x,blower1.position.y,100,100); 
 }
 function blow(){
   Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-5})
